@@ -1,0 +1,193 @@
+/* Core Settings */
+:root {
+    --primary: #1a1a1a;
+    --gold: #c5a059;
+    --bg-light: #faf9f6;
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.8;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+/* Hero Section */
+.hero {
+    height: 85vh;
+    background-color: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 15px;
+    color: var(--gold);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero-content .subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #aaaaaa;
+    letter-spacing: 1px;
+    text-transform: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--gold);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn:hover { background-color: #a68446; }
+
+/* General Sections */
+.section {
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: var(--primary);
+}
+
+.dark-bg {
+    background-color: var(--primary);
+    color: #fff;
+    max-width: 100%;
+}
+
+.dark-bg .section-title { color: var(--gold); }
+
+/* Layout Grid */
+.grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 50px 30px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border-top: 4px solid var(--gold);
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+/* Content Blocks */
+.guide-content, .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.guide-content p, .about-content p {
+    margin-bottom: 25px;
+    font-size: 1.15rem;
+}
+
+.guide-content strong { color: var(--gold); }
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.footer h2 {
+    color: var(--gold);
+    margin-bottom: 25px;
+}
+
+.footer p { color: #888; margin-bottom: 10px; }
+
+/* Mobile Formatting */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 20px; padding: 20px; }
+    .hero-content h1 { font-size: 3rem; }
+    .section { padding: 60px 20px; }
+}
