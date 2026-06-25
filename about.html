@@ -4,315 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Artchemy Nexus</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Base Variables (Matches Homepage) */
-        :root {
-            --primary-color: #2c2c2c; 
-            --secondary-color: #fcfbf9; 
-            --accent-color: #8b7355; 
-            --text-color: #333333;
-            --light-text: #666666;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        body {
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Navigation */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 5%;
-            background-color: #ffffff;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.03);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Internal Page Header */
-        .page-header {
-            background-color: var(--primary-color);
-            color: #ffffff;
+        .about-hero {
+            padding: 8rem 5%;
             text-align: center;
-            padding: 6rem 5%;
+            background-color: var(--off-white);
         }
-
-        .page-header h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        /* Standard Sections */
-        section {
-            padding: 5rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--light-text);
-            font-size: 1.1rem;
-        }
-
-        /* Text Block Styling */
-        .text-block {
-            background: #ffffff;
-            padding: 4rem;
+        
+        .visual-placeholder {
+            width: 100%;
+            height: 500px;
+            background-color: #d1dadd; /* Light teal tint for placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-teal);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
             border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-            margin-bottom: 3rem;
-            border-left: 4px solid var(--accent-color);
+            margin: 3rem 0;
         }
 
-        /* Team Grid */
+        .content-block {
+            max-width: 800px;
+            margin: 0 auto 5rem auto;
+            text-align: center;
+        }
+
+        .content-block h2 {
+            margin-bottom: 2rem;
+            color: var(--primary-teal);
+        }
+
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .team-member {
-            background: #ffffff;
-            padding: 2.5rem;
-            text-align: center;
-            border-radius: 4px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-        }
-
-        .team-role {
-            color: var(--accent-color);
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        /* Ecosystem List */
-        .ecosystem-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .eco-card {
-            padding: 2rem;
-            background-color: #f5f4f0;
-            border-radius: 4px;
-        }
-
-        .eco-card ul {
-            list-style-type: none;
-            margin-top: 1rem;
-        }
-
-        .eco-card li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 1.5rem;
-            color: var(--light-text);
-        }
-
-        .eco-card li::before {
-            content: "•";
-            color: var(--accent-color);
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            padding: 5rem 5% 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto 4rem;
-        }
-
-        .footer-col h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-            text-transform: uppercase;
-        }
-
-        .footer-col a, .footer-col p {
-            color: #999999;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.8rem;
-            font-size: 0.95rem;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #333333;
-            color: #777777;
-            font-size: 0.85rem;
+            padding: 5rem 5%;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">A / N</a>
+        <a href="index.html" class="logo">A<span>/</span>N</a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="page-header">
-        <h1>Built Around Indian Rug Craftsmanship</h1>
-    </div>
+    <section class="about-hero">
+        <span class="section-subtitle">Our Heritage</span>
+        <h1 style="font-size: 3.5rem; color: var(--primary-teal);">Built Around Indian Rug Craftsmanship</h1>
+    </section>
 
-    <section>
-        <div class="text-block" style="text-align: center;">
-            <p style="font-size: 1.3rem; color: var(--primary-color);">Artchemy Nexus was founded to bring structure and reliability to sourcing rugs from India.</p>
-            <p>India's rug industry is supported by generations of skilled artisans and specialized weaving units across the country. We work closely with these partners, coordinating development, production, and export so our international clients can access Indian craftsmanship with clarity and confidence.</p>
+    <!-- Placeholder for Artisan Image -->
+    <section style="padding: 0 5%;">
+        <div class="visual-placeholder">
+            [Artisan working on a traditional loom - Insert Image]
         </div>
+    </section>
 
-        <div class="text-block">
-            <h2>The Idea Behind Artchemy Nexus</h2>
-            <p>India has long been one of the world's most important centers for handmade rug production. Across different regions of the country, skilled weaving units produce hand-knotted and hand-tufted rugs using techniques refined over generations.</p>
-            <p>For international clients, however, navigating this ecosystem can be complex. Production capabilities vary between regions, communication gaps can occur, and managing quality, timelines, and export logistics often requires local coordination.</p>
-            <p><strong>Artchemy Nexus was established to simplify this process.</strong></p>
+    <section class="content-block">
+        <h2>The Idea Behind Artchemy Nexus</h2>
+        <p>Artchemy Nexus was founded to bring structure and reliability to sourcing rugs from India. India's rug industry is supported by generations of skilled artisans. We work closely with these partners, coordinating development, production, and export so our international clients can access Indian craftsmanship with clarity and confidence.</p>
+    </section>
+
+    <section style="background-color: var(--primary-teal); color: var(--pure-white); padding: 5rem 5%;">
+        <div class="content-block" style="max-width: 900px; margin-bottom: 0;">
+            <h2 style="color: var(--pure-white);">How We Work</h2>
             <p>We work directly with trusted weaving units. Managing the development, production, and export stages, we provide our clients with a structured and reliable way to source rugs from India.</p>
         </div>
     </section>
 
-    <section style="background-color: #ffffff; max-width: 100%; padding: 5rem 5%;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center;">Meet the Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <h3>Harvinder Singh</h3>
-                    <span class="team-role">Founder</span>
-                    <p style="font-size: 0.95rem;">Harvinder oversees sourcing, product development, and international business operations at the company. Working closely with weaving clusters and manufacturing partners across India, he focuses on building long-term relationships with buyers.</p>
-                    <p style="font-size: 0.95rem;">His hands-on involvement across the process helps ensure smooth communication, reliable execution, and a more personal way of doing business.</p>
-                </div>
-                
-                <div class="team-member">
-                    <h3>Manoj Sharma</h3>
-                    <span class="team-role">Chief Strategy Officer</span>
-                    <p style="font-size: 0.95rem;">Manoj leads strategy, business and growth initiatives at Artchemy Nexus. He focuses on aligning product development with international market needs while strengthening relationships across India's weaving clusters.</p>
-                    <p style="font-size: 0.95rem;">His strategic approach ensures consistent quality and reliable execution, helping deliver premium handmade rugs that meet global buyer expectations.</p>
-                </div>
-
-                <div class="team-member">
-                    <h3>Prabh Singh</h3>
-                    <span class="team-role">Director - Canada Operations</span>
-                    <p style="font-size: 0.95rem;">Prabh handles our operations in Canada, from building relationships with clients to coordinating shipments and final deliveries. He works closely with buyers on the ground and makes sure everything runs smoothly once our rugs reach Canada.</p>
-                    <p style="font-size: 0.95rem;">His understanding of the market and direct approach help us stay connected with clients and deliver a dependable experience throughout the process.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2 style="text-align: center; margin-bottom: 3rem;">How We Work Within the Rug Ecosystem</h2>
-        <div class="ecosystem-section">
-            <div class="eco-card">
-                <h3>Understanding the Ecosystem</h3>
-                <ul>
-                    <li>India's rug industry spans multiple regions and weaving traditions</li>
-                    <li>Each region brings different techniques, materials, and production strengths</li>
-                    <li>Navigating this landscape requires local knowledge and trusted relationships</li>
-                </ul>
-            </div>
-            <div class="eco-card">
-                <h3>Structured Production Coordination</h3>
-                <ul>
-                    <li>Development and sampling are coordinated with experienced weaving units</li>
-                    <li>Production planning is structured to maintain clarity and consistency</li>
-                    <li>Orders are monitored throughout the manufacturing process</li>
-                </ul>
-            </div>
-            <div class="eco-card">
-                <h3>Reliable Export Management</h3>
-                <ul>
-                    <li>Export documentation and shipment preparation are handled carefully</li>
-                    <li>Packaging and logistics are coordinated for smooth international delivery</li>
-                    <li>Clients receive their orders with clarity, reliability, and proper scheduling</li>
-                </ul>
-            </div>
+    <!-- Placeholder for Team Image -->
+    <section style="padding: 0 5%;">
+        <div class="visual-placeholder">
+            [Team collaboration/Workshop interior - Insert Image]
         </div>
     </section>
 
@@ -321,21 +98,12 @@
             <div class="footer-col">
                 <h4>Artchemy Nexus</h4>
                 <p>New Delhi, India</p>
-                <p>sales@artchemynexus.com</p>
+                <a href="mailto:sales@artchemynexus.com">sales@artchemynexus.com</a>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms & Conditions</a>
-                <a href="#">Shipping Policy</a>
-                <a href="#">Return & Replacement Policy</a>
-            </div>
-            <div class="footer-col">
-                <h4>Explore & Learn</h4>
-                <a href="#">FAQs</a>
-                <a href="#">Working with Us</a>
-                <a href="#">The Ultimate Rug Guide</a>
-                <a href="#">Heritage & History</a>
             </div>
         </div>
         <div class="copyright">
