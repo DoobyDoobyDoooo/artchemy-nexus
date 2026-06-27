@@ -1,0 +1,30 @@
+/* css/animations.css */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(36px);
+}
+
+.reveal-image {
+  clip-path: inset(12% 0 12% 0);
+}
+
+.split-text .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.split-text .word span {
+  display: inline-block;
+  transform: translateY(110%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up,
+  .reveal-image,
+  .split-text .word span {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+  }
+}

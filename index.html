@@ -1,92 +1,380 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Rug Export | Artchemy Nexus</title>
-    
-    <!-- Fonts: Playfair Display for Headings, Montserrat for Body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    
-    <!-- Link to your consolidated style.css -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Luxury Rug Exporter from India | Artchemy Nexus</title>
+  <meta name="description" content="Artchemy Nexus partners with global retailers, interior designers, hospitality projects, and private-label brands to develop luxury handmade rugs from India." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://artchemy-nexus.vercel.app/" />
+
+  <meta property="og:title" content="Artchemy Nexus | Luxury Handmade Rugs from India" />
+  <meta property="og:description" content="A premium sourcing partner for handmade Indian rugs, custom collections, hospitality projects, and private-label manufacturing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://artchemy-nexus.vercel.app/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=1600&q=80" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Artchemy Nexus | Luxury Handmade Rugs from India" />
+  <meta name="twitter:description" content="Luxury rug sourcing, custom manufacturing, private-label production, and export partnerships from India." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Artchemy Nexus",
+      "url": "https://artchemy-nexus.vercel.app/",
+      "description": "Luxury handmade rug exporter and sourcing partner from India.",
+      "areaServed": ["United States", "Canada", "Europe", "Australia", "New Zealand"],
+      "sameAs": []
+    }
+  </script>
 </head>
+
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Navigation -->
-    <header>
-        <a href="index.html" class="logo">A<span>/</span>N</a>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="page-progress" aria-hidden="true"></div>
 
-    <!-- 1. HERO SECTION WITH IMAGE BACKGROUND -->
-    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1652634213812-f0deeb1de78e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFuZCUyMGtub3R0ZWQlMjBydWd8ZW58MHx8MHx8fDA%3D'); background-size: cover; background-position: center; background-attachment: fixed;">
-        <h1>Bespoke Indian Rugs for the <span>Global Connoisseur</span></h1>
-        <p>Bridging the gap between traditional Indian weaving units and the demands of international luxury retail and interior design.</p>
-        <div style="display: flex; gap: 20px; justify-content: center;">
-            <a href="products.html" class="btn-gold">Explore Collections</a>
-            <a href="about.html" style="background: transparent; border: 1px solid white; padding: 1rem 3rem; color: white; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Our Process</a>
+  <header class="site-header" data-header>
+    <div class="container">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html" class="nav__brand" aria-label="Artchemy Nexus home">A/N</a>
+
+        <ul class="nav__menu" data-menu>
+          <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav__link" href="products.html">Products</a></li>
+          <li><a class="nav__link" href="exporter.html">Exporter</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="nav__toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="home-hero__media" data-parallax>
+        <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=2200&q=85" alt="Luxury handmade rug in a refined interior setting" />
+      </div>
+
+      <div class="home-hero__content container">
+        <p class="eyebrow reveal-up">Luxury Handmade Rugs from India</p>
+        <h1 id="hero-title" class="display-title split-text">
+          Bespoke Indian rugs for global design houses.
+        </h1>
+        <p class="lead reveal-up">
+          Artchemy Nexus connects India’s finest weaving clusters with international retailers, boutique stores, hospitality projects, interior designers, and private-label brands.
+        </p>
+
+        <div class="home-hero__actions reveal-up">
+          <a href="contact.html" class="btn btn--primary">Begin an Inquiry</a>
+          <a href="#craftsmanship" class="btn btn--secondary">Explore Craft</a>
         </div>
+      </div>
+
+      <a href="#philosophy" class="scroll-cue" aria-label="Scroll to brand philosophy">
+        <span></span>
+        Scroll
+      </a>
     </section>
 
-    <!-- 2. PILLARS OF EXCELLENCE -->
-    <section>
-        <span class="section-subtitle">Why Partner With Us</span>
-        <h2 class="section-title">The Artchemy Ecosystem</h2>
-        <div class="focus-grid">
-            <div class="focus-card">
-                <h3>Artisan Heritage</h3>
-                <p>Authentic hand-knotted and hand-tufted products sourced directly from India’s historical weaving clusters.</p>
-            </div>
-            <div class="focus-card">
-                <h3>Quality Controlled</h3>
-                <p>We provide onsite oversight, ensuring every knot meets international standards before it leaves India.</p>
-            </div>
-            <div class="focus-card">
-                <h3>Global Export</h3>
-                <p>Expert coordination of documentation, packaging, and logistics for a seamless delivery experience.</p>
-            </div>
+    <!-- Brand Philosophy -->
+    <section id="philosophy" class="section philosophy">
+      <div class="container editorial-grid">
+        <div class="flow reveal-up">
+          <p class="eyebrow">Brand Philosophy</p>
+          <h2 class="section-title">Sourcing shaped by trust, restraint, and material intelligence.</h2>
+          <p class="lead">
+            Artchemy Nexus exists for buyers who need more than a product list. We work as a quiet bridge between India’s weaving heritage and the expectations of contemporary global interiors.
+          </p>
+          <p class="body-copy">
+            Every relationship begins with listening: the market, the room, the hand, the fibre, the price architecture, and the story a rug must carry when it reaches its final space.
+          </p>
         </div>
+
+        <figure class="image-frame image-frame--portrait image-reveal reveal-image">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&w=1200&q=85" alt="Calm luxury interior with warm textiles and handcrafted details" />
+        </figure>
+      </div>
     </section>
 
-    <!-- 3. EDITORIAL SPACE -->
-    <section style="background: var(--off-white); text-align: center;">
-        <span class="section-subtitle">The Process</span>
-        <h2 class="section-title">From Loom to Living Space</h2>
-        <div class="img-container" style="max-width: 1000px; margin: 0 auto;">
-            <img src="https://images.unsplash.com/photo-1563837738662-c86ef2ba99f8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Artisan weaving" style="width: 100%; border-radius: 4px;">
+    <!-- Featured Collections -->
+    <section class="section collections section--warm" aria-labelledby="collections-title">
+      <div class="container">
+        <div class="section__header section__header--split">
+          <div>
+            <p class="eyebrow section__kicker">Featured Collections</p>
+            <h2 id="collections-title" class="section-title">A curated language of texture, pile, and proportion.</h2>
+          </div>
+          <p class="lead">Collections are developed for buyers who value edit, consistency, and a refined material point of view.</p>
         </div>
+
+        <div class="collection-grid">
+          <article class="collection-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1575414003591-ece8d0416c7a?auto=format&fit=crop&w=900&q=85" alt="Hand knotted rug detail" />
+            <div><span>01</span><h3>Hand Knotted</h3></div>
+          </article>
+
+          <article class="collection-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=85" alt="Contemporary rug in a premium interior" />
+            <div><span>02</span><h3>Contemporary</h3></div>
+          </article>
+
+          <article class="collection-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Flatweave rug in a minimal room" />
+            <div><span>03</span><h3>Flatweave</h3></div>
+          </article>
+
+          <article class="collection-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Heritage inspired rug in refined living space" />
+            <div><span>04</span><h3>Heritage</h3></div>
+          </article>
+
+          <article class="collection-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=85" alt="Hand tufted rug and elegant furniture" />
+            <div><span>05</span><h3>Hand Tufted</h3></div>
+          </article>
+
+          <article class="collection-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Custom rug in architectural interior" />
+            <div><span>06</span><h3>Custom Collections</h3></div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Artchemy Nexus</h4>
-                <p>New Delhi, India</p>
-                <a href="mailto:sales@artchemynexus.com">sales@artchemynexus.com</a>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Shipping Policy</a>
-                <a href="#">Return & Replacement Policy</a>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright &copy; 2026 Artchemy Nexus. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- Why India -->
+    <section class="section why-india">
+      <div class="why-india__image reveal-image">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=2200&q=85" alt="Indian artisan textile details and handwoven material" />
+      </div>
 
+      <div class="container why-india__content">
+        <p class="eyebrow">Why India</p>
+        <h2 class="section-title">Centuries of weaving knowledge, refined for contemporary global supply.</h2>
+
+        <div class="stats">
+          <div class="stat"><span class="stat__value" data-count="250">0</span><span class="stat__label">Years of regional weaving heritage</span></div>
+          <div class="stat"><span class="stat__value" data-count="42">0</span><span class="stat__label">Specialized craft and finishing processes</span></div>
+          <div class="stat"><span class="stat__value" data-count="18">0</span><span class="stat__label">Buyer categories supported globally</span></div>
+          <div class="stat"><span class="stat__value" data-count="5">0</span><span class="stat__label">Major export regions served</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Craftsmanship -->
+    <section id="craftsmanship" class="section craftsmanship section--soft">
+      <div class="container">
+        <div class="section__header">
+          <p class="eyebrow">Craftsmanship</p>
+          <h2 class="section-title">From fibre to final inspection, every stage is a form of authorship.</h2>
+        </div>
+
+        <div class="craft-track">
+          <article class="craft-step reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&w=800&q=85" alt="Raw natural wool fibres" />
+            <span>01</span><h3>Raw Wool</h3><p>Material selection begins with handle, durability, tone, and intended use.</p>
+          </article>
+          <article class="craft-step reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=800&q=85" alt="Natural dye tones and textile colour development" />
+            <span>02</span><h3>Dyeing</h3><p>Colour is developed with restraint, consistency, and interior sensitivity.</p>
+          </article>
+          <article class="craft-step reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1581337204873-ef36aa186caa?auto=format&fit=crop&w=800&q=85" alt="Artisan weaving textile on a loom" />
+            <span>03</span><h3>Weaving</h3><p>Construction is matched to design language, price point, and market need.</p>
+          </article>
+          <article class="craft-step reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=800&q=85" alt="Finished handmade rug texture" />
+            <span>04</span><h3>Finishing</h3><p>Washing, trimming, binding, and finishing bring the surface alive.</p>
+          </article>
+          <article class="craft-step reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85" alt="Luxury rug placed in finished room" />
+            <span>05</span><h3>Inspection</h3><p>Each piece is reviewed for colour, size, finish, and buyer specifications.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="section capabilities">
+      <div class="container">
+        <div class="capability-row reveal-up">
+          <div><p class="eyebrow">Capabilities</p><h2 class="section-title">Built for brands that need control without noise.</h2></div>
+          <p class="lead">From one-off custom development to private-label collections, we support buyers who need a dependable Indian manufacturing partner with a refined eye.</p>
+        </div>
+
+        <div class="capability-grid">
+          <article><h3>Custom Manufacturing</h3><p>Design-led development across size, weave, pile, colour, and finishing.</p></article>
+          <article><h3>Private Label</h3><p>Confidential production for retailers, studios, and boutique design brands.</p></article>
+          <article><h3>Hospitality</h3><p>Project-ready rugs for hotels, residences, villas, and contract interiors.</p></article>
+          <article><h3>Flexible MOQ</h3><p>Sampling and production structures aligned with buyer stage and market scale.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Markets -->
+    <section class="section markets section--warm">
+      <div class="container">
+        <div class="section__header section__header--split">
+          <div><p class="eyebrow">Global Export Markets</p><h2 class="section-title">India at the source. The world in view.</h2></div>
+          <p class="lead">We support buyers across Australia, New Zealand, Canada, the United States, and Europe with documentation, packaging, inspection, and export coordination.</p>
+        </div>
+
+        <div class="market-map reveal-up" aria-label="Export regions served by Artchemy Nexus">
+          <div class="market-map__line"></div>
+          <span class="market-dot market-dot--usa">USA</span>
+          <span class="market-dot market-dot--canada">Canada</span>
+          <span class="market-dot market-dot--europe">Europe</span>
+          <span class="market-dot market-dot--australia">Australia</span>
+          <span class="market-dot market-dot--nz">New Zealand</span>
+          <span class="market-dot market-dot--india">India</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Development -->
+    <section class="section development">
+      <div class="container">
+        <div class="section__header">
+          <p class="eyebrow">Custom Rug Development</p>
+          <h2 class="section-title">A measured process from first idea to finished shipment.</h2>
+        </div>
+
+        <div class="development-steps">
+          <div class="development-step reveal-up"><span>01</span><h3>Concept</h3></div>
+          <div class="development-step reveal-up"><span>02</span><h3>Sampling</h3></div>
+          <div class="development-step reveal-up"><span>03</span><h3>Development</h3></div>
+          <div class="development-step reveal-up"><span>04</span><h3>Production</h3></div>
+          <div class="development-step reveal-up"><span>05</span><h3>Inspection</h3></div>
+          <div class="development-step reveal-up"><span>06</span><h3>Shipping</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials section--soft">
+      <div class="container">
+        <div class="testimonial-layout">
+          <blockquote class="testimonial reveal-up">
+            <p>“Artchemy Nexus understands the difference between supplying rugs and developing a collection with commercial taste.”</p>
+            <cite>Private-label retail buyer, Europe</cite>
+          </blockquote>
+          <blockquote class="testimonial reveal-up">
+            <p>“Their strength is calm execution. Sampling, communication, and finishing all felt considered.”</p>
+            <cite>Interior procurement studio, Australia</cite>
+          </blockquote>
+          <blockquote class="testimonial reveal-up">
+            <p>“They gave our hospitality team access to Indian craft without losing the discipline required for project delivery.”</p>
+            <cite>Hospitality design consultant, Canada</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights -->
+    <section class="section insights">
+      <div class="container">
+        <div class="section__header section__header--split">
+          <div><p class="eyebrow">Insights</p><h2 class="section-title">Editorial notes from the world of rugs, rooms, and sourcing.</h2></div>
+          <a href="ultimate-rug-guide.html" class="btn btn--secondary">Read the Guide</a>
+        </div>
+
+        <div class="insight-grid">
+          <article class="insight-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="Minimal interior with premium rug" />
+            <p class="eyebrow">Buying Guide</p>
+            <h3>How to evaluate handmade rug quality before production.</h3>
+          </article>
+          <article class="insight-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=85" alt="Architectural interior with refined textiles" />
+            <p class="eyebrow">Materials</p>
+            <h3>Choosing wool, viscose, jute, and blends for global interiors.</h3>
+          </article>
+          <article class="insight-card reveal-up">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=85" alt="Luxury living space with rug" />
+            <p class="eyebrow">Sourcing</p>
+            <h3>What premium buyers should expect from an Indian rug partner.</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section final-cta">
+      <div class="container">
+        <div class="cta noise reveal-up">
+          <div class="cta__content">
+            <p class="eyebrow">Begin With Intention</p>
+            <h2 class="section-title">Let us develop the rug collection your market has been waiting for.</h2>
+            <p class="lead">Share your design direction, buyer profile, target pricing, or project requirement. We will help translate it into a refined sourcing path from India.</p>
+            <a href="contact.html" class="btn btn--gold">Start a Conversation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">Artchemy Nexus</div>
+        <p class="footer__text">Luxury handmade rug sourcing, custom manufacturing, and private-label export partnerships from India.</p>
+      </div>
+
+      <div>
+        <p class="footer__title">Navigate</p>
+        <ul class="footer__links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="working-with-us.html">Working With Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__title">Markets</p>
+        <ul class="footer__links">
+          <li>USA</li>
+          <li>Canada</li>
+          <li>Europe</li>
+          <li>Australia</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__title">Contact</p>
+        <ul class="footer__links">
+          <li><a href="mailto:hello@artchemynexus.com">hello@artchemynexus.com</a></li>
+          <li><a href="contact.html">Inquiry Form</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 Artchemy Nexus. All rights reserved.</p>
+      <p>Handmade in India. Designed for the world.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>
