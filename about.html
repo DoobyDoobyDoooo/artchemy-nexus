@@ -1,83 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Artchemy Nexus</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .about-header { padding: 8rem 5% 4rem; text-align: center; background: var(--off-white); }
-        .content-section { max-width: 900px; margin: 0 auto; padding: 5rem 5%; }
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
-        .team-card { background: var(--off-white); padding: 3rem; border: 1px solid rgba(11, 79, 79, 0.1); }
-        .eco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 5rem 5%; }
-        .visual-placeholder { width: 100%; height: 400px; background: #e0e4e4; display: flex; align-items: center; justify-content: center; color: var(--primary-teal); font-style: italic; margin: 2rem 0; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Artchemy Nexus | Luxury Rug Exporter from India</title>
+  <meta name="description" content="Discover the story of Artchemy Nexus, a luxury handmade rug sourcing partner connecting India's weaving heritage with global retailers, designers, and hospitality buyers." />
+  <link rel="canonical" href="https://artchemy-nexus.vercel.app/about.html" />
+
+  <meta property="og:title" content="About Artchemy Nexus" />
+  <meta property="og:description" content="A refined Indian rug sourcing partner built on craftsmanship, trust, and global design understanding." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
 </head>
+
 <body>
-    <header>
-        <a href="index.html" class="logo">A<span>/</span>N</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="page-progress" aria-hidden="true"></div>
 
-    <section class="about-header">
-        <span class="section-subtitle">Our Story</span>
-        <h1 style="color: var(--primary-teal);">Built Around Indian Rug Craftsmanship</h1>
+  <header class="site-header" data-header>
+    <div class="container">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html" class="nav__brand">A/N</a>
+
+        <ul class="nav__menu" data-menu>
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="products.html">Products</a></li>
+          <li><a class="nav__link" href="exporter.html">Exporter</a></li>
+          <li><a class="nav__link" href="about.html" aria-current="page">About</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="nav__toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- About Hero -->
+    <section class="about-hero">
+      <div class="container about-hero__grid">
+        <div class="about-hero__content">
+          <p class="eyebrow reveal-up">About Artchemy Nexus</p>
+          <h1 class="display-title split-text">A quiet bridge between Indian craft and global luxury interiors.</h1>
+        </div>
+
+        <p class="lead reveal-up">
+          We exist for buyers who need more than access to production. Artchemy Nexus brings together material knowledge, design sensitivity, export discipline, and long-term sourcing relationships.
+        </p>
+      </div>
     </section>
 
-    <section class="content-section">
-        <p>Artchemy Nexus was founded to bring structure and reliability to sourcing rugs from India. India's rug industry is supported by generations of skilled artisans and specialized weaving units across the country. We work closely with these partners, coordinating development, production, and export so our international clients can access Indian craftsmanship with clarity and confidence.</p>
-        
-        <div class="visual-placeholder">[Insert: Artisan working on a loom]</div>
-
-        <h2>The Idea Behind Artchemy Nexus</h2>
-        <p>India has long been one of the world's most important centers for handmade rug production. Across different regions, skilled weaving units produce hand-knotted and hand-tufted rugs using techniques refined over generations. For international clients, however, navigating this ecosystem can be complex. Production capabilities vary between regions, communication gaps can occur, and managing quality, timelines, and export logistics often requires local coordination. Artchemy Nexus was established to simplify this process.</p>
+    <!-- Story Image -->
+    <section class="about-image-band">
+      <figure class="about-image-band__frame reveal-image">
+        <img
+          src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=2200&q=85"
+          alt="Detailed handmade rug texture showing refined Indian craftsmanship"
+          loading="lazy"
+        />
+      </figure>
     </section>
 
-    <section class="team-grid">
-        <div class="team-card">
-            <h3>Harvinder Singh</h3>
-            <p><strong>Founder</strong></p>
-            <p>Harvinder oversees sourcing, product development, and international business operations. Working closely with weaving clusters and manufacturing partners, he focuses on building long-term relationships with buyers.</p>
+    <!-- Story -->
+    <section class="section about-story">
+      <div class="container editorial-grid">
+        <div class="flow reveal-up">
+          <p class="eyebrow">Our Story</p>
+          <h2 class="section-title">Built for buyers who see sourcing as a creative responsibility.</h2>
         </div>
-        <div class="team-card">
-            <h3>Manoj Sharma</h3>
-            <p><strong>Chief Strategy Officer</strong></p>
-            <p>Manoj leads strategy and growth. He aligns product development with international market needs while strengthening relationships across India's weaving clusters to ensure consistent quality.</p>
+
+        <div class="flow reveal-up">
+          <p class="body-copy">
+            Artchemy Nexus was created to serve international retailers, interior designers, boutique stores, hospitality projects, and private-label brands seeking handmade rugs from India with clarity and refinement.
+          </p>
+          <p class="body-copy">
+            India has one of the world’s richest weaving ecosystems. Yet global buyers often need more than manufacturing access. They need translation: between design intent and craft process, between price architecture and quality, between sampling and reliable export.
+          </p>
+          <p class="body-copy">
+            Our role is to make that journey feel considered, calm, and commercially intelligent.
+          </p>
         </div>
-        <div class="team-card">
-            <h3>Prabh Singh</h3>
-            <p><strong>Director - Canada Operations</strong></p>
-            <p>Prabh handles operations in Canada, from building relationships to coordinating shipments. His direct approach ensures clients receive a dependable experience throughout the process.</p>
-        </div>
+      </div>
     </section>
 
-    <section style="background-color: var(--primary-teal); color: var(--pure-white);">
-        <h2 style="color: var(--pure-white); text-align: center; margin-bottom: 3rem;">How We Work Within the Rug Ecosystem</h2>
-        <div class="eco-grid">
-            <div>
-                <h3>Understanding</h3>
-                <p>India's rug industry spans multiple regions and weaving traditions. Each brings different techniques, materials, and strengths. Navigating this requires local knowledge.</p>
-            </div>
-            <div>
-                <h3>Coordination</h3>
-                <p>Development and sampling are coordinated with experienced units. Production planning is structured to maintain clarity, and orders are monitored throughout the manufacturing process.</p>
-            </div>
-            <div>
-                <h3>Reliable Export</h3>
-                <p>Export documentation, packaging, and logistics are coordinated carefully for smooth international delivery, ensuring clients receive their orders with proper scheduling.</p>
-            </div>
-        </div>
+    <!-- Mission Vision -->
+    <section class="section about-principles section--warm">
+      <div class="container about-principles__grid">
+        <article class="about-principle reveal-up">
+          <p class="eyebrow">Mission</p>
+          <h2 class="heading-lg">To connect India’s handmade rug heritage with global buyers through disciplined sourcing and refined development.</h2>
+        </article>
+
+        <article class="about-principle reveal-up">
+          <p class="eyebrow">Vision</p>
+          <h2 class="heading-lg">To become the most trusted quiet partner for luxury rug sourcing from India.</h2>
+        </article>
+      </div>
     </section>
 
-    <footer>...</footer>
+    <!-- Statistics -->
+    <section class="section about-stats">
+      <div class="container">
+        <div class="section__header section__header--split">
+          <div>
+            <p class="eyebrow section__kicker">Global Outlook</p>
+            <h2 class="section-title">Rooted in India. Built for international expectations.</h2>
+          </div>
+          <p class="lead">
+            Our work is shaped by the realities of export buyers: consistency, documentation, communication, timelines, and the subtle details that make a rug feel right in a finished space.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal-up">
+            <span class="stat__value" data-count="5">0</span>
+            <span class="stat__label">Major export regions served</span>
+          </div>
+          <div class="stat reveal-up">
+            <span class="stat__value" data-count="18">0</span>
+            <span class="stat__label">Buyer categories supported</span>
+          </div>
+          <div class="stat reveal-up">
+            <span class="stat__value" data-count="42">0</span>
+            <span class="stat__label">Craft and finishing considerations</span>
+          </div>
+          <div class="stat reveal-up">
+            <span class="stat__value" data-count="250">0</span>
+            <span class="stat__label">Years of regional weaving inheritance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section about-timeline section--soft">
+      <div class="container">
+        <div class="section__header">
+          <p class="eyebrow">How We Think</p>
+          <h2 class="section-title">Every collection moves through a quiet sequence of decisions.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item reveal-up">
+            <span>01</span>
+            <h3>Understand the Buyer</h3>
+            <p>We begin with market position, customer profile, design direction, pricing, quantities, and delivery realities.</p>
+          </article>
+
+          <article class="timeline__item reveal-up">
+            <span>02</span>
+            <h3>Translate the Brief</h3>
+            <p>Design references become material choices, construction methods, colour direction, texture, pile, and finish.</p>
+          </article>
+
+          <article class="timeline__item reveal-up">
+            <span>03</span>
+            <h3>Develop With Makers</h3>
+            <p>Sampling and production are aligned with the right craft clusters, capabilities, and quality expectations.</p>
+          </article>
+
+          <article class="timeline__item reveal-up">
+            <span>04</span>
+            <h3>Control the Details</h3>
+            <p>Inspection, packaging, documentation, and export coordination help the final product arrive with confidence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section about-values">
+      <div class="container">
+        <div class="section__header section__header--split">
+          <div>
+            <p class="eyebrow section__kicker">Values</p>
+            <h2 class="section-title">The standards behind the silence.</h2>
+          </div>
+          <p class="lead">
+            The Artchemy Nexus experience is intentionally calm. Behind that calm is a disciplined way of working.
+          </p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="reveal-up">
+            <h3>Restraint</h3>
+            <p>We believe luxury is not excess. It is proportion, patience, and knowing what to leave out.</p>
+          </article>
+
+          <article class="reveal-up">
+            <h3>Craft Respect</h3>
+            <p>Every rug begins with human skill. Our role is to protect that value while meeting global expectations.</p>
+          </article>
+
+          <article class="reveal-up">
+            <h3>Commercial Clarity</h3>
+            <p>Beautiful sourcing must also be practical: timelines, pricing, documentation, and repeatability matter.</p>
+          </article>
+
+          <article class="reveal-up">
+            <h3>Long Relationships</h3>
+            <p>We are built for buyers who value consistency, discretion, and trust over transactional sourcing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section final-cta">
+      <div class="container">
+        <div class="cta noise reveal-up">
+          <div class="cta__content">
+            <p class="eyebrow">Work With Artchemy Nexus</p>
+            <h2 class="section-title">If your next rug collection needs craft, clarity, and quiet confidence, begin here.</h2>
+            <p class="lead">
+              Share your project, buyer profile, target market, or collection idea. We will help shape the sourcing path from India.
+            </p>
+            <a href="contact.html" class="btn btn--gold">Start a Conversation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">Artchemy Nexus</div>
+        <p class="footer__text">Luxury handmade rug sourcing, custom manufacturing, and private-label export partnerships from India.</p>
+      </div>
+
+      <div>
+        <p class="footer__title">Navigate</p>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="working-with-us.html">Working With Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__title">Markets</p>
+        <ul class="footer__links">
+          <li>USA</li>
+          <li>Canada</li>
+          <li>Europe</li>
+          <li>Australia</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__title">Contact</p>
+        <ul class="footer__links">
+          <li><a href="mailto:hello@artchemynexus.com">hello@artchemynexus.com</a></li>
+          <li><a href="contact.html">Inquiry Form</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 Artchemy Nexus. All rights reserved.</p>
+      <p>Handmade in India. Designed for the world.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>
