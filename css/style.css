@@ -1929,3 +1929,70 @@ section:not(:first-of-type) img {
     grid-column: auto;
   }
 }
+ About Hero Refinement
+   Fixes awkward headline wrapping and intro placement
+   ========================================================= */
+
+.about-hero {
+  padding-block: calc(var(--header-height) + var(--space-12)) var(--space-14);
+}
+
+.about-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.about-hero__content {
+  max-width: 1180px;
+}
+
+.about-hero .display-title {
+  max-width: 1120px;
+  font-size: clamp(4rem, 7vw, 7rem);
+  line-height: 1.02;
+  padding-bottom: 0.12em;
+}
+
+.about-hero .lead {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: clamp(2rem, 10vw, 10rem);
+  font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+  line-height: 1.75;
+}
+
+.about-image-band {
+  margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+  .about-hero .lead {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-hero .display-title {
+    font-size: clamp(3.5rem, 10vw, 6rem);
+  }
+}
+
+@media (max-width: 760px) {
+  .about-hero {
+    padding-block: calc(var(--header-height) + var(--space-8)) var(--space-10);
+  }
+
+  .about-hero__grid {
+    gap: var(--space-6);
+  }
+
+  .about-hero .display-title {
+    font-size: clamp(3rem, 16vw, 4.8rem);
+    line-height: 1.04;
+  }
+
+  .about-hero .lead {
+    font-size: var(--text-base);
+  }
+}
