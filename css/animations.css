@@ -10,12 +10,13 @@
 
 .split-text .word {
   display: inline-block;
-  overflow: hidden;
-  vertical-align: top;
+  overflow: visible;
+  vertical-align: baseline;
 }
 
 .split-text .word span {
   display: inline-block;
+  padding-bottom: 0.14em;
   transform: translateY(110%);
 }
 
