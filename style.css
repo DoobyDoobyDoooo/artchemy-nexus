@@ -1,35 +1,38 @@
-/* --- LURXURY BRAND VARIABLES --- */
+/* --- 1. GLOBAL VARIABLES & RESET --- */
 :root {
-    --primary-teal: #0B4F4F; /* Deep, luxurious teal */
-    --accent-gold: #D4AF37; /* Classic metallic gold */
-    --light-gold: #e8d08d;
+    --primary-teal: #0B4F4F;
+    --accent-gold: #D4AF37;
     --pure-white: #ffffff;
-    --off-white: #f8f9fa; /* For subtle section contrasts */
+    --off-white: #f8f9fa;
     --rich-black: #111111;
     --text-grey: #4a4a4a;
 }
 
-/* --- BASE SETUP --- */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 body {
     background-color: var(--pure-white);
     color: var(--rich-black);
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Montserrat', sans-serif; /* Clean sans-serif for body */
+    font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, .logo {
-    font-family: 'Playfair Display', serif; /* Luxury serif for headings */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
     font-weight: 600;
 }
 
-/* --- NAVIGATION --- */
+/* --- 2. NAVIGATION --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -65,7 +68,6 @@ nav a {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: color 0.3s ease;
     font-weight: 500;
 }
 
@@ -73,7 +75,7 @@ nav a:hover, nav a.active {
     color: var(--accent-gold);
 }
 
-/* --- BUTTONS --- */
+/* --- 3. COMPONENTS (BUTTONS & IMAGES) --- */
 .btn-gold {
     display: inline-block;
     padding: 1rem 3rem;
@@ -83,16 +85,44 @@ nav a:hover, nav a.active {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: all 0.3s ease;
     border: 1px solid var(--accent-gold);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-gold::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: var(--pure-white);
+    transition: 0.5s;
+    z-index: -1;
 }
 
 .btn-gold:hover {
-    background-color: transparent;
     color: var(--accent-gold);
 }
 
-/* --- HERO SECTION --- */
+.btn-gold:hover::before {
+    left: 0;
+}
+
+.img-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.img-container img {
+    transform: scale(1);
+}
+
+.img-container:hover img {
+    transform: scale(1.05);
+}
+
+/* --- 4. HERO SECTION --- */
 .hero {
     min-height: 85vh;
     display: flex;
@@ -101,10 +131,8 @@ nav a:hover, nav a.active {
     align-items: center;
     text-align: center;
     padding: 0 5%;
-    background-color: var(--primary-teal); /* Teal Background */
+    background-color: var(--primary-teal);
     color: var(--pure-white);
-    position: relative;
-    /* Optional: Add a dark overlay image here later */
 }
 
 .hero h1 {
@@ -112,7 +140,6 @@ nav a:hover, nav a.active {
     color: var(--pure-white);
     margin-bottom: 1.5rem;
     max-width: 1000px;
-    line-height: 1.2;
 }
 
 .hero h1 span {
@@ -122,14 +149,12 @@ nav a:hover, nav a.active {
 
 .hero p {
     font-size: 1.1rem;
-    font-weight: 300;
     max-width: 800px;
     margin-bottom: 3rem;
     color: var(--off-white);
-    line-height: 1.8;
 }
 
-/* --- STANDARD SECTIONS --- */
+/* --- 5. SECTIONS --- */
 section {
     padding: 7rem 5%;
 }
@@ -146,35 +171,11 @@ section {
     color: var(--accent-gold);
     letter-spacing: 3px;
     font-size: 0.85rem;
-    font-weight: 600;
     text-align: center;
     display: block;
     margin-bottom: 1rem;
 }
 
-/* --- ABOUT HIGHLIGHT --- */
-.about-highlight {
-    background-color: var(--off-white);
-    text-align: center;
-}
-
-.about-highlight p.lead {
-    font-size: 1.4rem;
-    color: var(--text-grey);
-    max-width: 900px;
-    margin: 0 auto 2rem;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-}
-
-.about-highlight h3 {
-    color: var(--accent-gold);
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* --- FOCUS GRID --- */
 .focus-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -188,47 +189,16 @@ section {
     padding: 4rem 3rem;
     text-align: center;
     border: 1px solid rgba(11, 79, 79, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
 }
 
 .focus-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     border-color: var(--accent-gold);
 }
 
-.focus-card h3 {
-    font-size: 2rem;
-    color: var(--primary-teal);
-    margin-bottom: 1rem;
-}
-
-.focus-card p {
-    color: var(--text-grey);
-    margin-bottom: 2rem;
-}
-
-.focus-card ul {
-    list-style: none;
-    text-align: left;
-}
-
-.focus-card li {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
-    color: var(--rich-black);
-}
-
-.focus-card li::before {
-    content: "✦";
-    color: var(--accent-gold);
-    position: absolute;
-    left: 0;
-    font-size: 1rem;
-}
-
-/* --- FOOTER --- */
+/* --- 6. FOOTER --- */
 footer {
     background-color: var(--rich-black);
     color: var(--pure-white);
@@ -244,9 +214,7 @@ footer {
 }
 
 .footer-col h4 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    font-weight: 600;
     margin-bottom: 2rem;
     color: var(--accent-gold);
     letter-spacing: 2px;
@@ -259,11 +227,6 @@ footer {
     display: block;
     margin-bottom: 1rem;
     font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.footer-col a:hover {
-    color: var(--pure-white);
 }
 
 .copyright {
@@ -272,5 +235,4 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
     color: #666;
     font-size: 0.8rem;
-    letter-spacing: 1px;
 }
