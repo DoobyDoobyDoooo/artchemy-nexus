@@ -1,4 +1,3 @@
-```css
 /* =========================================================
    Artchemy Nexus — Luxury Design System
    File: css/style.css
@@ -8,7 +7,7 @@
 /* -----------------------------
    Font Imports
 ----------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap";
 
 /* -----------------------------
    CSS Variables
@@ -976,4 +975,3 @@ ol {
     transition-duration: 1ms !important;
   }
 }
-```
